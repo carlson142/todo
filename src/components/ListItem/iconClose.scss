@@ -1,0 +1,6 @@
+.iconClose {
+  transition: all 0.2s ease-in;
+  &:hover {
+    fill: var(--color-primary-bright-blue);
+  }
+}

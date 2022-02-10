@@ -1,13 +1,65 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url("https://fonts.googleapis.com/css2?family=Comforter&family=Josefin+Sans:wght@400;700&display=swap");
+
+:root {
+  --color-primary-bright-blue: hsl(220, 98%, 61%);
+  --gradient: linear-gradient(
+    to right,
+    hsl(192, 100%, 67%),
+    hsl(280, 87%, 65%)
+  );
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+/* ТЕМИЗАЦИЯ */
+body[data-theme="dark"] {
+  --color-bg-main: hsl(235, 21%, 11%);
+  --color-bg-item: hsl(235, 24%, 19%);
+  --color-text: hsl(236, 33%, 92%);
+
+  --color-underline: hsl(233, 14%, 35%);
+
+  /*
+- Light Grayish Blue: hsl(234, 39%, 85%)
+
+- Dark Grayish Blue: hsl(234, 11%, 52%)
+- Very Dark Grayish Blue: hsl(233, 14%, 35%)
+- Very Dark Grayish Blue: hsl(237, 14%, 26%)
+  */
+}
+
+body[data-theme="light"] {
+  --color-bg-main: hsl(236, 33%, 92%);
+  --color-bg-item: hsl(0, 0%, 98%);
+  --color-text: hsl(235, 19%, 35%);
+
+  --color-underline: hsl(233, 11%, 84%);
+
+  /*
+- Very Light Grayish Blue: hsl(236, 33%, 92%)
+- Light Grayish Blue: hsl(233, 11%, 84%)
+- Dark Grayish Blue: hsl(236, 9%, 61%)
+
+  */
+}
+/* КОНЕЦ ТЕМИЗАЦИЯ */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-weight: 400;
+}
+
+body {
+  font-family: "Josefin Sans", sans-serif;
+
+  /*  background-color: var(--color-bg-main);
+  color: var(--color-text); */
+  min-height: 100%;
+  background-color: var(--color-bg-main);
 }
